@@ -18,7 +18,7 @@ This is a project that was heavily inspired by the website <link>chess.com</link
 
 ### Software Quality
 
-- **Testing:** The logic layer is covered in unit tests, and the controller layer in integration tests. The coverage is checked via Sonarqube, which also checks for bugs and code smells, which have been reduced to 0. The frontend is also covered by Cypress end-to-end tests.
+- **Testing:** The logic layer is covered in unit tests, and the controller layer in integration tests. The coverage is checked via Sonarqube, which also checks for bugs and bad coding practices. The frontend is also covered by Cypress end-to-end tests.
 
 - **Performance Testing:** The speed of the software was tested with Apache JMeter for the backend and Google Lighthouse for the frontend. A report on all of this can be found in the Documentation folder, as well as screenshots of the Sonarqube and the end-to-end test results.
 
