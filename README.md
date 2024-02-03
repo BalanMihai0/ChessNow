@@ -12,7 +12,9 @@ This is a project that was heavily inspired by the website <link>chess.com</link
 
 - **Backend Architecture:** The backend runs on Java SpringBoot following a layered architecture, abiding by the principles of OOP as well as the SOLID principles. It is modeled following the dependency inversion design pattern, making use of interfaces for cross-layer communication. Data persistence is achieved by making use of the ORM JPA Repository and using EntityFramework for the MySQL database. Optimizations have been made by using custom queries for aggregated data.
 
-- **Frontend:** The frontend runs on ReactJs and uses Axios for making backend connections. API endpoints are secured by the CORS configuration as well as the role-based backend authorization. More details about this can be found in the Software Architecture Document (SAD) located in the Documentation folder.
+- **Frontend:** The frontend runs on ReactJs and uses Axios for making backend connections. API endpoints are secured by the CORS configuration as well as the role-based backend authorization. 
+
+- More details about this can be found in the Software Architecture Document (SAD) located in the Documentation folder.
 
 ### Software Quality
 
