@@ -1,0 +1,10 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(109, 105, 105);
+  background-image: url('./assets/images/wood_bg.jpg');
+}
+
+  

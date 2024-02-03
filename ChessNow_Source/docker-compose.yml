@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-chessnow-container
+    environment:
+      - 'MYSQL_DATABASE=chessnow_db'
+      - 'MYSQL_PASSWORD=password'
+      - 'MYSQL_ROOT_PASSWORD=password'
+      - 'MYSQL_USER=myuser'
+    ports:
+      - 3308:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - docker_compose_network
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: .
+    ports:
+      - 8090:8080
+    environment:
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/chessnow_db'
+      - 'SPRING_DATASOURCE_USERNAME=root'
+      - 'SPRING_DATASOURCE_PASSWORD=password'
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - docker_compose_network
+networks:
+   docker_compose_network:
+volumes:
+  mysql-data:

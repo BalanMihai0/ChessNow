@@ -1,0 +1,17 @@
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-container {
+  border-radius: 13px;
+}
+
+.transparent-container {
+  background-color: rgba(40, 40, 40, 0.7);
+}
+
+.icon-large {
+  font-size: 24px;
+}

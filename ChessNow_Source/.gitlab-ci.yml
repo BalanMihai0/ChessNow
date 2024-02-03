@@ -1,0 +1,43 @@
+stages:
+  - build
+  - test
+  - sonar
+  - deploy
+
+
+build-job:
+  stage: build
+  script:
+    - cd ChessNow_Source  
+    - ./gradlew assemble
+    - ./gradlew --stop
+  only:
+    - 'main'
+
+test-job:
+  stage: test
+  script:
+    - cd ChessNow_Source  
+    - ./gradlew test
+    - ./gradlew --stop
+  only:
+    - 'main'
+
+sonar-job:
+  stage: sonar
+  script:
+    - cd ChessNow_Source  
+    - ./gradlew test sonar
+    - ./gradlew --stop
+  only:
+    - 'main'
+  allow_failure: true
+
+deploy-job:
+  stage: deploy
+  script:
+    - cd ChessNow_Source
+    - docker-compose build --no-cache
+    - docker-compose up -d
+  only:
+    - 'main'
