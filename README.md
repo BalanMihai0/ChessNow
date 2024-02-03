@@ -36,4 +36,6 @@ This is a project that was heavily inspired by the website <link>chess.com</link
   
 - **Performance Report and SAD:** The performance reports and the SAD have already been introduced in previous paragraphs.
 
+- **OWASP Security Report:** The OWASP Security Report showcases how the application handles the 10 security risks, discusses future ideas for improving security and, where is the case, discusses why a certain security risk was not addressed
+
 - **Diagrams:** C1-C4 diagrams for relevant flows can be found in the Diagrams folder, as well as inside the SAD. Diagram of the pipeline can be found in the SAD as well.
