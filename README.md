@@ -6,7 +6,11 @@ This is a project that was heavily inspired by the website <link>chess.com</link
 
 - **Account Control and Security:** Managed via JWT tokens and authorization. Social interactions such as inviting people to a match and chatting are facilitated through Websockets.
   
-- **Chess Game Validation:** Ensures the validity of all interactions (moves, checks, castling, promotions, pinned pieces, etc.). Prediction arrows are drawn by using Right-Click. Offers playable chess against StockFish AI, board controls (e.g., resign), match history, user match statistics, profile and details change, and a rating system. It includes an admin interface used for adding accounts or for banning accounts.
+- **Chess Game Validation:** Ensures the validity of all interactions (moves, checks, castling, promotions, pinned pieces, etc.). Prediction arrows are drawn by using Right-Click. Offers playable chess against StockFish AI as well.
+- **Board Controls**: Resign, Offer Draw, See Previous More, See Next Move (if the user is looking at a past position). This part of the app is still incomplete.
+- **Profile**: Shows the user his personal details and allows for modification of email and username. Shows rating and displays the match history, which matches were won, lost or ended in a draw. Also shows the timestamps of matches.
+- **Admin Interface**: The admin can add new user accounts or ban existing users, on the base of reports of performing illegal game actions such as cheating using an AI.
+- **Socials**: Allows the user to look at other users, invite them to matches, see a summarized (aggregated) view of the user's profile, sort and filter through other users, as well as look for specific accounts with a misstype-proof search functionality.
 
 ### Technical and Architectural Choices
 
